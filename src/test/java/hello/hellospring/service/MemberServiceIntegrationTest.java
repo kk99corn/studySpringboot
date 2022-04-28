@@ -38,10 +38,10 @@ class MemberServiceIntegrationTest {
 	void duplicateMemberException() {
 		// given
 		Member member = new Member();
-		member.setName("member1");
+		member.setName("member3");
 
 		Member member2 = new Member();
-		member2.setName("member1");
+		member2.setName("member3");
 
 		// when
 		memberService.join(member);
