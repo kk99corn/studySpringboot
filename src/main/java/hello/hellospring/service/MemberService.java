@@ -17,7 +17,22 @@ public class MemberService {
 	}
 
 	public Long join(Member member) {
-		// 같은 이름이 있는 중복 회원 X
+//		long start = System.currentTimeMillis();
+//
+//		try {
+//			// 핵심 로직 - 핵심 관심 사항(core concern)
+//
+//			// 같은 이름이 있는 중복 회원 X
+//			validateDuplicateMember(member);
+//
+//			memberRepository.save(member);
+//			return member.getId();
+//		} finally {
+//			// 공통 관심 사항(cross-cutting concern)
+//			long finish = System.currentTimeMillis();
+//			long timeMS = finish - start;
+//			System.out.println("MemberService.join = " + timeMS + "ms");
+//		}
 		validateDuplicateMember(member);
 
 		memberRepository.save(member);
